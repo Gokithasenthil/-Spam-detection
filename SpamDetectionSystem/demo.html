@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Demo | Spam Detection</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Live Demo</h1></header>
+
+<nav>
+    <a href="technical.html">← Back</a>
+    <a href="impact.html">Next → Impact</a>
+</nav>
+
+<section>
+    <h2>4. Demo / Prototype</h2>
+    <p>Type or paste an email below to predict whether it is spam or legitimate:</p>
+
+    <div class="demo-box">
+        <textarea id="emailText" rows="5" placeholder="Enter message here..."></textarea>
+        <button onclick="analyzeSpam()">Analyze</button>
+        <p id="result"></p>
+    </div>
+    
+</section>
+<section>
+  <h2>4. Demo / Prototype</h2>
+  <p>Click below to view our simulated Gmail integration for spam detection:</p>
+
+  <a href="simulation/index.html" target="_blank">
+    <button>▶️ Launch Gmail Spam Detector Demo</button>
+  </a>
+</section>
+
+
+<script>
+const spamWords = ["win", "free", "offer", "click", "money", "lottery", "subscribe", "urgent", "deal", "cash"];
+function analyzeSpam() {
+    const text = document.getElementById("emailText").value.toLowerCase();
+    let count = 0;
+    spamWords.forEach(w => { if (text.includes(w)) count++; });
+    const result = document.getElementById("result");
+    if (count >= 3) result.innerHTML = "🚨 SPAM DETECTED!";
+    else if (count >= 1) result.innerHTML = "⚠️ Suspicious content found!";
+    else result.innerHTML = "✅ Legitimate message.";
+}
+</script>
+
+<footer>© 2025 CyberGuardians</footer>
+</body>
+</html>

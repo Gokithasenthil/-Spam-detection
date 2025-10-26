@@ -1,0 +1,17 @@
+[
+  {
+    "from": "promo@shopoffers.com",
+    "subject": "Limited time offer - Win cash now!",
+    "body": "Click this link to win $500 instantly!"
+  },
+  {
+    "from": "hr@company.com",
+    "subject": "Interview Schedule",
+    "body": "Your interview is confirmed for Monday at 10 AM."
+  },
+  {
+    "from": "lottery@rewardzone.com",
+    "subject": "You have won the grand prize!",
+    "body": "Claim your $10,000 reward by clicking here."
+  }
+]
